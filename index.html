@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Initiative of Medicos for Service and Academics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#050a3d;
+  --royal:#10259e;
+  --royal-light:#2a46d6;
+  --gold:#e0b84f;
+  --gold-soft:#f3dc9a;
+  --white:#ffffff;
+  --muted:#c3cbf5;
+}
+*{box-sizing:border-box}
+html{min-height:100%}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:'Inter',system-ui,Arial,sans-serif;
+  color:var(--white);
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(224,184,79,.22), transparent 45%),
+    linear-gradient(170deg,var(--royal-light) 0%,var(--royal) 40%,var(--navy) 100%);
+  background-attachment:fixed;
+  position:relative;
+  overflow-x:hidden;
+}
+.container{
+  position:relative;
+  width:90%;
+  max-width:520px;
+  margin:0 auto;
+  padding:calc(40px + env(safe-area-inset-top,0px)) 0 calc(30px + env(safe-area-inset-bottom,0px));
+  animation:rise .8s ease-out both;
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+.logo-wrap{
+  width:176px;height:176px;
+  margin:0 auto 26px;
+  padding:6px;
+  border-radius:50%;
+  background:linear-gradient(145deg,var(--gold-soft),var(--gold) 50%,#a9812a);
+  box-shadow:0 0 0 8px rgba(224,184,79,.14),0 18px 50px rgba(0,0,40,.55),0 0 60px rgba(224,184,79,.3);
+}
+.logo{
+  display:block;width:100%;height:100%;
+  object-fit:cover;border-radius:50%;
+  background:var(--navy);
+}
+
+h1{
+  margin:0 auto;
+  max-width:420px;
+  font-family:"Inter",system-ui,Arial,sans-serif;
+  font-weight:700;
+  font-size:clamp(24px,6.5vw,32px);
+  line-height:1.15;
+  letter-spacing:-.01em;
+  color:var(--gold-soft);
+  text-shadow:0 2px 14px rgba(0,0,40,.5);
+}
+.divider{
+  width:72px;height:3px;border-radius:3px;
+  margin:20px auto 16px;
+  background:var(--gold);
+}
+.description{
+  margin:0 0 34px;
+  color:var(--muted);
+  font-size:16px;
+}
+h2{
+  margin:0 0 16px;
+  font-family:"Inter",system-ui,Arial,sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:var(--white);
+}
+
+.social-link{
+  display:flex;align-items:center;gap:16px;
+  padding:15px 18px;
+  margin:0 0 14px;
+  color:var(--white);
+  text-decoration:none;
+  font-size:17px;
+  font-weight:600;
+  text-align:left;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(224,184,79,.45);
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 8px 24px rgba(0,0,40,.25);
+  transition:background .2s,border-color .2s,transform .15s;
+}
+.social-link .icon{
+  flex:none;
+  width:42px;height:42px;
+  display:grid;place-items:center;
+  border-radius:12px;
+  background:rgba(224,184,79,.16);
+  color:var(--gold-soft);
+}
+.social-link svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.social-link .label{flex:1}
+.social-link .arrow{width:18px;height:18px;opacity:.6}
+.social-link:hover{background:rgba(255,255,255,.16);border-color:var(--gold);transform:translateY(-2px)}
+.social-link:active{transform:scale(.97)}
+.social-link:focus-visible{outline:3px solid var(--gold-soft);outline-offset:3px}
+
+/* Membership call to action */
+.social-link.primary{
+  margin-top:26px;
+  color:var(--navy);
+  background:linear-gradient(135deg,var(--gold-soft),var(--gold));
+  border-color:transparent;
+  box-shadow:0 10px 30px rgba(224,184,79,.35);
+}
+.social-link.primary .icon{background:rgba(5,10,61,.12);color:var(--navy)}
+.social-link.primary:hover{background:linear-gradient(135deg,#fff0bd,var(--gold-soft))}
+
+footer{
+  margin-top:40px;
+  color:var(--muted);
+  opacity:.75;
+  font-size:13px;
+}
+@media (prefers-reduced-motion:reduce){
+  .container{animation:none}
+  .social-link{transition:none}
+}
+</style>
+</head>
+<body>
+
+<main class="container">
+
+  <div class="logo-wrap">
+    <img class="logo" src="logo.png" alt="IMSA logo">
+  </div>
+
+  <h1>Initiative of Medicos for Service and Academics</h1>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <p class="description">Follow us and stay connected.</p>
+
+  <h2>Our Socials</h2>
+
+  <a class="social-link" href="https://drive.google.com/file/d/1RYknXcF_szqPKtrd9-uMHAVIo3gJ1-KZ/view?usp=drivesdk" target="_blank" rel="noopener">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+    <span class="label">Organisational Profile</span>
+    <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <a class="social-link" href="https://docs.google.com/document/d/1p7CgflwUdLa9IQX0LXdP110G3KdvKNd5cIQ048C9hmc/edit?usp=drivesdk" target="_blank" rel="noopener">
+    <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></svg></span>
+    <span class="label">FAQs</span>
+    <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <a class="social-link" href="https://youtube.com/@imsaofficial99?si=ULcXPBiJq5sl0Hl4" target="_blank" rel="noopener">
+    <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+    <span class="label">YouTube</span>
+    <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <a class="social-link" href="https://www.linkedin.com/company/imsa-initiative-of-medicos-for-service-and-academics/" target="_blank" rel="noopener">
+    <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.5v.01M12 16v-5.5M12 13c0-1.7 1-2.5 2.3-2.5S16.5 11.3 16.5 13v3"/></svg></span>
+    <span class="label">LinkedIn</span>
+    <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <a class="social-link" href="https://whatsapp.com/channel/0029VaWAXCU3QxRwfDBYTi2V" target="_blank" rel="noopener">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8.2 18.7z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.3-1.8-1-.8.7a3.5 3.5 0 0 1-1.8-1.8l.7-.8-1-1.8z"/></svg></span>
+    <span class="label">WhatsApp Channel</span>
+    <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <a class="social-link primary" href="https://forms.gle/k6m149gAbECCZoeX6" target="_blank" rel="noopener">
+    <span class="icon"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 20c0-3.5 3-6 7-6M18 9v6M15 12h6"/></svg></span>
+    <span class="label">Membership</span>
+    <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+  </a>
+
+  <footer>© 2026 Initiative of Medicos for Service and Academics</footer>
+
+</main>
+
+</body>
+</html>
